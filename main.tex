@@ -1,0 +1,80 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,a4paper,twoside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{wrapfig}
+\setlength\columnsep{1em}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{siunitx}
+
+\usepackage{xcookybooky}
+\setlength{\headheight}{15pt}
+\setRecipeColors{%
+    recipename = black,
+    numeration = black}
+\setRecipeSizes{%
+    recipename = \Huge,
+    inghead = \large,
+    prephead = \large}
+\setRecipeLengths{%
+    ingredientswidth = 0.45\textwidth}
+% https://tex.stackexchange.com/questions/68745/possible-values-for-fontseries-and-fontshape
+% "Helvetica" T1 bold normal 
+\setRecipenameFont{qhv}{T1}{b}{n}
+% https://tex.stackexchange.com/questions/481698/missing-endcsname-in-package-xcookybooky-texlive
+\renewcommand{\step}
+{%
+ \stepcounter{step}%shouldn't be in the argument of lettrine
+    \lettrine
+    [%
+        lines=2,
+        lhang=0,          % space into margin, value between 0 and 1
+        loversize=0.15,   % enlarges the height of the capital
+        slope=0em,
+        findent=1em,      % gap between capital and intended text
+        nindent=0em       % shifts all intended lines, begining with the second line
+    ]{\fontfamily{lmr}\selectfont\thestep}{}%
+}
+
+%
+% Need this for wide latin
+%
+\usepackage{fontspec}
+\setmainfont{XCharter}
+\setsansfont{TeX Gyre Heros}
+\newfontfamily{\japanesefont}{Ume Mincho}
+\usepackage[CJK]{ucharclasses}
+\setTransitionsForJapanese{\japanesefont}{}
+
+\title{Recipes}
+\author{Various Artists}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\clearpage
+	
+	\chapter{The Recipes}
+
+	\input{recipes/hirabread.tex}
+    \clearpage
+	\input{recipes/goulash.tex}
+    \clearpage
+    \input{recipes/pasta_carbonara.tex}
+	\clearpage
+	\input{recipes/japanese_beef_and_potato_stew.tex}
+	\clearpage
+	\input{recipes/prazen_krompir.tex}
+    \clearpage
+    \input{recipes/cookies.tex}
+	\clearpage
+	\input{recipes/brownies.tex}
+	
+\end{document}
