@@ -15,14 +15,16 @@
 \usepackage{xfrac}
 
 \usepackage{siunitx}
-\sisetup{quotient-mode=fraction, fraction-function=\sfrac,%
-	product-units = single,output-product={\,}} % We are abusing product to get nice fractions
+\sisetup{quotient-mode=fraction, fraction-function=\sfrac,
+	product-units = single,output-product={\,}, % We are abusing product to get nice fractions
+	range-phrase=--,range-units=single}
 \DeclareSIUnit\inch{in}
 \DeclareSIUnit\pound{lb}
 \DeclareSIUnit\teaspoon{tsp}
 \DeclareSIUnit\tablespoon{tbsp}
 \DeclareSIUnit\cup{cup}
 \DeclareSIUnit\ounce{oz}
+\DeclareSIUnit\fahrenheit{\degree F}
 
 \usepackage{xcookybooky}
 \setlength{\headheight}{15pt}
@@ -103,4 +105,6 @@
 	\input{recipes/mushroom_carbonara.tex}
 	\clearpage
 	\input{recipes/digaag_qumbe.tex}
+	\clearpage
+	\input{recipes/apple_muffins.tex}
 \end{document}
