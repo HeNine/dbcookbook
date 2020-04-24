@@ -12,7 +12,17 @@
 
 \usepackage[margin=1in]{geometry}
 
+\usepackage{xfrac}
+
 \usepackage{siunitx}
+\sisetup{quotient-mode=fraction, fraction-function=\sfrac,%
+	product-units = single,output-product={\,}} % We are abusing product to get nice fractions
+\DeclareSIUnit\inch{in}
+\DeclareSIUnit\pound{lb}
+\DeclareSIUnit\teaspoon{tsp}
+\DeclareSIUnit\tablespoon{tbsp}
+\DeclareSIUnit\cup{cup}
+\DeclareSIUnit\ounce{oz}
 
 \usepackage{xcookybooky}
 \setlength{\headheight}{15pt}
@@ -26,7 +36,7 @@
 \setRecipeLengths{%
     ingredientswidth = 0.45\textwidth}
 % https://tex.stackexchange.com/questions/68745/possible-values-for-fontseries-and-fontshape
-% "Helvetica" T1 bold normal 
+% "Helvetica", T1 encoding, bold weight, normal shape
 \setRecipenameFont{qhv}{T1}{b}{n}
 % https://tex.stackexchange.com/questions/481698/missing-endcsname-in-package-xcookybooky-texlive
 \renewcommand{\step}
@@ -54,7 +64,14 @@
 \setTransitionsForJapanese{\japanesefont}{}
 
 \title{Recipes}
-\author{Various Artists}
+\author{\texttt{chimingfish}\\%
+		\texttt{ekimekim}\\%
+		\texttt{HeNine}\\%
+		\texttt{Hiramas}\\%
+		\texttt{LambMower}\\%
+		\texttt{Lunik}\\%
+		\texttt{mithodin}\\%
+}
 
 \begin{document}
 	\maketitle
@@ -82,4 +99,6 @@
 	\input{recipes/grand_marnier_strawberries.tex}
 	\clearpage
 	\input{recipes/fairy_bread.tex}
+	\clearpage
+	\input{recipes/mushroom_carbonara.tex}
 \end{document}
