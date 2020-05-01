@@ -44,7 +44,7 @@
 % https://tex.stackexchange.com/questions/481698/missing-endcsname-in-package-xcookybooky-texlive
 \renewcommand{\step}
 {%
- \stepcounter{step}%shouldn't be in the argument of lettrine
+ \refstepcounter{step}%shouldn't be in the argument of lettrine
     \lettrine
     [%
         lines=2,
@@ -69,7 +69,8 @@
 
 
 \title{Recipes}
-\author{\texttt{chemistring}\\%
+\author{\texttt{BrainStew}
+		\texttt{chemistring}\\%
 		\texttt{chimingfish}\\%
 		\texttt{ekimekim}\\%
 		\texttt{HeNine}\\%
@@ -149,4 +150,14 @@
 	\input{recipes/meatballs.tex}
 	\clearpage
 	\input{recipes/havreflarn.tex}
+	\clearpage
+	\input{recipes/alleluia_family_christmas_sauce.tex}
+	\clearpage
+	\input{recipes/neapolitan_pizza_dough.tex}
+	\clearpage
+	\input{recipes/duck_confit_tacos.tex}
+	\clearpage
+	\input{recipes/stuffed_mushrooms.tex}
+	\clearpage
+	\input{recipes/cajun_jambalaya.tex}
 \end{document}
