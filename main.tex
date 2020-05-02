@@ -6,6 +6,11 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+\usepackage{etoolbox}
+
+\usepackage{imakeidx}
+\makeindex[name=authors,title=Recipes by Authors,columns=2]
+
 \usepackage{graphicx}
 \graphicspath{{imglow/}{imgraw/}}
 
@@ -70,6 +75,9 @@
 \usepackage[CJK]{ucharclasses}
 \setTransitionsForJapanese{\japanesefont}{}
 
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+	{\sffamily\huge\bfseries\scshape}{\chaptertitlename\ \thechapter:}{20pt}{\fontsize{48pt}{48pt}\selectfont}
 
 \title{Recipes}
 \author{\texttt{BrainStew}\\%
@@ -92,83 +100,109 @@
 	\tableofcontents
 	\clearpage
 
-	\chapter{The Recipes}
+	\chapter{General Cooking}
+	\clearpage
 
-	\input{recipes/hirabread.tex}
+	% Starters
+	\input{recipes/salmon_rolls.tex}
+	\clearpage
+	\input{recipes/fried_tofu.tex}
+	\clearpage
+	\input{recipes/stuffed_mushrooms.tex}
+	\clearpage
+
+	% Mains
+	\input{recipes/shrimp_and_feta_casserole.tex}
+	\clearpage
+	\input{recipes/chicken_drumsticks.tex}
+	\clearpage
+	\input{recipes/meatballs.tex}
+	\clearpage
+	\input{recipes/chicken_gyros.tex}
+	\clearpage
+	\input{recipes/duck_confit_tacos.tex}
+	\clearpage
+
+	% Sides
+	\input{recipes/prazen_krompir.tex}
     \clearpage
-	\input{recipes/goulash.tex}
+    \input{recipes/gratin_dauphinois.tex}
     \clearpage
-    \input{recipes/pasta_carbonara.tex}
+    \input{recipes/broccoli_with_almonds_and_garlic.tex}
+
+	\chapter{Soups}
+	\clearpage
+
+	\input{recipes/pea_soup.tex}
+	\clearpage
+	\input{recipes/gouda_and_lentil_soup.tex}
+	\clearpage
+	\input{recipes/tom_yum_soup.tex}
 	\clearpage
 	\input{recipes/japanese_beef_and_potato_stew.tex}
 	\clearpage
-	\input{recipes/prazen_krompir.tex}
-    \clearpage
-    \input{recipes/cookies.tex}
+	\input{recipes/goulash.tex}
+	\clearpage
+	\input{recipes/chorizo_stew.tex}
+
+	\chapter{Rice 'n' Stuff}
+	\clearpage
+
+	\input{recipes/beans_and_rice.tex}
+	\clearpage
+	\input{recipes/saffron_risotto.tex}
+	\clearpage
+	\input{recipes/cajun_jambalaya.tex}
+	\clearpage
+	\input{recipes/cauliflower_gashi.tex}
+	\clearpage
+	\input{recipes/chicken_tikka_masala.tex}
+	\clearpage
+	\input{recipes/digaag_qumbe.tex}
+
+	\chapter{Pasta}
+	\clearpage
+
+	\input{recipes/alleluia_family_christmas_sauce.tex}
+	\clearpage
+	\input{recipes/pasta_carbonara.tex}
+	\clearpage
+	\input{recipes/mushroom_carbonara.tex}
+	\clearpage
+	\input{recipes/hubbes_famous_lasagna.tex}
+
+	\chapter{Baking and Desserts}
+	\clearpage
+
+	% Savoury
+	\input{recipes/hirabread.tex}
+	\clearpage
+	\input{recipes/neapolitan_pizza_dough.tex}
+	\clearpage
+	\input{recipes/focaccia_with_olives_and_rosemary.tex}
+	\clearpage
+
+	% Sweet
+	\input{recipes/cookies.tex}
+	\clearpage
+	\input{recipes/havreflarn.tex}
+	\clearpage
+	\input{recipes/apple_muffins.tex}
 	\clearpage
 	\input{recipes/brownies.tex}
 	\clearpage
-	\input{recipes/chorizo_stew.tex}
+	\input{recipes/espresso_brownies.tex}
+	\clearpage
+	\input{recipes/blueberry_crumble.tex}
+	\clearpage
+	\input{recipes/pumpkin_pie.tex}
 	\clearpage
 	\input{recipes/grand_marnier_strawberries.tex}
 	\clearpage
 	\input{recipes/fairy_bread.tex}
 	\clearpage
-	\input{recipes/mushroom_carbonara.tex}
-	\clearpage
-	\input{recipes/digaag_qumbe.tex}
-	\clearpage
-	\input{recipes/apple_muffins.tex}
-	\clearpage
-	\input{recipes/chicken_gyros.tex}
-	\clearpage
-	\input{recipes/pumpkin_pie.tex}
-	\clearpage
-	\input{recipes/chicken_drumsticks.tex}
-	\clearpage
-	\input{recipes/tom_yum_soup.tex}
-	\clearpage
-	\input{recipes/chicken_tikka_masala.tex}
-	\clearpage
-	\input{recipes/saffron_risotto.tex}
-	\clearpage
-	\input{recipes/gratin_dauphinois.tex}
-	\clearpage
-	\input{recipes/broccoli_with_almonds_and_garlic.tex}
-	\clearpage
-	\input{recipes/cauliflower_gashi.tex}
-	\clearpage
-	\input{recipes/focaccia_with_olives_and_rosemary.tex}
-	\clearpage
-	\input{recipes/gouda_and_lentil_soup.tex}
-	\clearpage
-	\input{recipes/shrimp_and_feta_casserole.tex}
-	\clearpage
-	\input{recipes/espresso_brownies.tex}
-	\clearpage
-	\input{recipes/pea_soup.tex}
-	\clearpage
-	\input{recipes/blueberry_crumble.tex}
-	\clearpage
-	\input{recipes/hubbes_famous_lasagna.tex}
-	\clearpage
-	\input{recipes/meatballs.tex}
-	\clearpage
-	\input{recipes/havreflarn.tex}
-	\clearpage
-	\input{recipes/alleluia_family_christmas_sauce.tex}
-	\clearpage
-	\input{recipes/neapolitan_pizza_dough.tex}
-	\clearpage
-	\input{recipes/duck_confit_tacos.tex}
-	\clearpage
-	\input{recipes/stuffed_mushrooms.tex}
-	\clearpage
-	\input{recipes/cajun_jambalaya.tex}
-	\clearpage
-	\input{recipes/salmon_rolls.tex}
-	\clearpage
-	\input{recipes/beans_and_rice.tex}
-	\clearpage
-	\input{recipes/fried_tofu.tex}
+
+	\printindex[authors]
+
+
 \end{document}
