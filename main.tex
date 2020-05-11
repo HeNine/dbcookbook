@@ -14,7 +14,7 @@
 \usepackage{graphicx}
 \graphicspath{{imglow/}{imgraw/}}
 
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
 \usepackage{wrapfig}
 \setlength\columnsep{1em}
 
@@ -98,8 +98,11 @@
 }
 
 \begin{document}
+	\frontmatter
 	\maketitle
 
+	\newpage
+	\phantomsection
 	% Colophon
 
 	\null
@@ -140,9 +143,14 @@
 	\vspace{1in}
 	© 2020 DesertBus Community IRC
 
+	\newpage
+	\newpage
+	\phantomsection
+%	\addcontentsline{toc}{section}{Table of Contents}
 	\tableofcontents
 	\clearpage
 
+	\mainmatter
 	\chapter{Bread!}
 	\clearpage
 
